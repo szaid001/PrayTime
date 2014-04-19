@@ -12,7 +12,7 @@ source $(dirname $0)/config.sh
 # --- RSYNC ---
 echo " --> uploading files..."
 set -x 
-rsync $RSYNC_OPTIONS -e "ssh -i /Users/cavitkeskin/cavitkeskin.pem" $LOCAL_PATH/ $LOGINNAME@$SERVER:$REMOTE_PATH/
+rsync $RSYNC_OPTIONS -e "ssh -v -i ${IDENTITY_FILE}" --exclude .git $LOCAL_PATH/ $SERVER_USER@$SERVER_ADDR:$SERVER_PATH/
 
 echo " --- end ---"
 
