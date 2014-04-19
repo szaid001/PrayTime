@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOGINNAME=ec2-user
-SERVER=web02
+#SERVER=web02
 SERVER=54.187.56.99
 
 USERNAME=binbir
