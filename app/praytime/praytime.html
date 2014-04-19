@@ -1,0 +1,47 @@
+<section id="times" class="scene">
+	<header>
+		<h1>Pray Time</h1>
+	</header>
+	<article>
+		<p class="location"></p>
+		<p class="date"></p>
+		<div class="times"></div>
+		<p class="error"></p>
+		<!--div id="google-maps" style="height: 300px;"></div-->
+	</article>
+	<footer>	
+	</footer>
+	
+	<script type="text/template" id="location">
+		<%=nameutf%>
+	</script>
+
+	<script type="text/template" id="date">
+		<b><%=time%></b><br><%=date%>
+	</script>
+	
+	<script type="text/template" id="times">
+		<table>
+			<tr><td>Imsak</td><td>:</td><td><%=imsak%></td></tr>
+			<tr><td>Gunes</td><td>:</td><td><%=sunrise%></td></tr>
+			<tr><td>Ogle</td><td>:</td><td><%=dhuhr%></td></tr>
+			<tr><td>Ikindi</td><td>:</td><td><%=asr%></td></tr>
+			<tr><td>Aksam</td><td>:</td><td><%=sunset%></td></tr>
+			<tr><td>Yatsi</td><td>:</td><td><%=isha%></td></tr>
+			<tr><td>Kible</td><td>:</td><td><span class="icon entypo-direction"></span> <a href="/praytime/qibla/lat=<%=latitude%>/lon=<%=longitude%>" style="letter-spacing: .1em;"><%=direction%>&deg; N</a></td></tr>
+		</table>
+	</script>
+
+	
+</section>
+
+
+<section id="qibla" class="scene">
+	<header>
+		<a href="/praytime/times" class="left icon"><span class="icon entypo">&#59229;</span></a>
+		<a href="#" class="right icon reset entypo-target"></a>
+		<h1>Qibla</h1>
+	</header>
+	<article>
+	</article>
+</section>

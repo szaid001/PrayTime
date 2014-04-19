@@ -1,0 +1,148 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: @font-family;
+	font-size: @font-size;
+	color: @text-color;
+	background-color: #666;
+}
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.1em; }
+
+p { line-height: 1.4em; }
+
+* {
+	color: @text-color;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+ul.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	& > li > a {
+		text-decoration: none;
+	}
+	&.horizontal {
+		overflow: auto;
+		& > li {
+			float: left;
+			padding: 0 .3em;
+			& > a {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+ul.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	& > li {
+		line-height: 2em;
+		border-bottom: 1px solid #f8f8f8;
+	}	
+}
+
+.box{
+	display:-moz-box; 
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:box;
+	.box-sizing(border-box);
+	&>* {
+		display: block;
+		margin: 0 @gutter/2;
+	}
+}
+
+.flex(@value){
+	-moz-box-flex:@value; /* Firefox */
+	-webkit-box-flex:@value; /* Safari and Chrome */
+	-ms-flex:@value; /* Internet Explorer 10 */
+	box-flex:@value;
+	
+}
+.flex1{
+	.flex(1.0);
+} 
+ 
+.flex2{
+	.flex(2.0);
+} 
+
+label>span {
+	display: inline-block;
+	width: 6em;
+	text-align: right;
+}
+
+select:focus,
+textarea:focus, 
+input:focus {   
+	outline: 0 none;
+}
+
+.inline-edit {
+	a {
+		text-decoration: none;
+	}
+	select,
+	textarea,
+	input {
+		border: 0;
+		padding: 0;
+		-webkit-appearance: none;
+	}
+	input[type="checkbox"]{
+		border: 0 solid silver;
+		width: 12px;
+	}
+}
+.xedit.box>* {height: 20px;}
+[mode="view"]>.edit { display: none; }
+[mode="edit"]>.view { display: none; }
+
+.icon {
+	min-width: 1em;
+	margin: 0 .25em;
+	text-decoration: none;
+
+	font-family: 'entypo', sans-serif;
+	&:before { font-family: 'entypo', sans-serif; text-align: center;}
+	&.edit:before { content:"\270e"; } 
+	&.delete:before { content:"\f014"; font-family: 'FontAwesome', sans-serif; } 
+	//&.cancel:before { content:"\2715"; } 
+	//&.save:before { content:"\2713"; } 
+	&.cancel:before { content:"\f00d"; font-family: 'FontAwesome', sans-serif;  }
+	&.save:before { content:"\f00c"; font-family: 'FontAwesome', sans-serif;  }
+	&.add:before { content:"\e003"; } 
+	&.address:before { content:"\e723"; } 
+	&.checked:before { content:"\f046"; font-family: 'FontAwesome', sans-serif; }	
+	&.unchecked:before { content:"\f096"; font-family: 'FontAwesome', sans-serif; }	
+}
+
+
+.XXL { font-size: @font-size*@XXL; }
+.XL { font-size: @font-size*@XL; }
+.L { font-size: @font-size*@L; }
+.M { font-size: @font-size*@M; }
+.S { font-size: @font-size*@S; }
+.XS { font-size: @font-size*@XS; }
+.XXS { font-size: @font-size*@XXS; }
+
+.left { float: left; }
+.right { float: right; }
+
+.tal { text-align: left; }
+.tar { text-align: right; }
+.tac { text-align: center; }
+
+.m1 { margin: @gutter; }
+.mrb1 { margin-right: @gutter; margin-bottom: @gutter; }
+
+.w1w { width: 3em; }

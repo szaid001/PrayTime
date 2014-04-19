@@ -1,0 +1,51 @@
+section[id="praytime-app"]{
+	
+	header {}
+	article {
+		color: #fff;
+		text-align: center;
+		text-shadow: 1px 1px 1px #444;
+		.location {
+			font-size: 1.2em;
+			min-height: 1.4em;
+			letter-spacing: .2em;
+			font-weight: bold;
+		}
+		.date{
+			letter-spacing: .1em;
+		}
+		.times{
+			table {
+				margin: 0 auto;
+				tr {
+					td {
+						//width: 10em;
+						text-align: left;
+						padding: @gutter/4 @gutter/3;
+						letter-spacing: .1em;
+					}
+					td:last-child {
+						text-align: right;
+					}
+				}	
+			}
+			
+		}
+		.error {
+			color: #aaa;
+			letter-spacing: 0.1em;
+			font-size: 0.8em;
+		}
+
+	}
+	footer {
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		left:0;
+		right: 0;
+		width: 100%;
+		padding: @gutter/2 0;
+	}
+
+}

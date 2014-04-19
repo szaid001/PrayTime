@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8"/>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+		<!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" /-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="apple-touch-icon" href="img/makkah-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/makkah-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/makkah-114x114.png">
+
+		<link href="/css/default/styles.css" rel="stylesheet/less" type="text/css" />
+		<link href="/css/fonts/entypo.css" rel="stylesheet" type="text/css" />
+		<link href="/css/fonts/fontawesome-webfont.css" rel="stylesheet" type="text/css" />
+        
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script type="text/javascript" src="/js/all.js"></script>
+		<script type="text/javascript" src="/js/application.js"></script>
+        
+        <title>Pray Time</title>
+    </head>
+    <body>
+		<section id="solution" class="solution">
+			<header id="header" class="solution"></header>
+			<nav id="nav" class="solution"></nav>
+			<section id="container" class="solution"></section>
+			<footer id="footer" class="solution"></footer>
+		</section>
+		<script>
+			$(function()
+			{
+				
+				Solution.initialize({debug: false});
+
+				Solution.Debug && less.watch();
+
+				//Solution.Router.navigate('/praytime/times', {trigger: true});	
+				//Solution.navigate('praytime');	
+				/*
+				Solution.get('/api/auth/current').done( function(data){ 
+					Solution.setUser(data); 
+				});
+				
+				Solution.load('appmenu-module', function(obj){
+					obj.create('#nav');
+				});
+				*/
+			});
+			
+			if(!Solution.Debug){
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-21567889-1']);
+				_gaq.push(['_setDomainName', '.binbir.net']);
+				_gaq.push(['_trackPageview']);
+				
+				(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			};
+			
+		</script>
+    </body>
+</html>
