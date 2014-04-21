@@ -84,7 +84,8 @@ function sceneTimesPrayTime(options)
 
 			prayTimes.tune({imsak: 4, sunrise:-7, dhuhr: 7, asr: 6, sunset: 9, isha: 4});
 			
-			var times = prayTimes.getTimes(dt, [lat, lng], tz, 'auto', '12h');
+			//var times = prayTimes.getTimes(dt, [lat, lng], tz, 'auto', '12h');
+			var times = prayTimes.getTimes(dt, [lat, lng], 'auto', 'auto', '12h');
 			times['direction'] = directionQibla(lat, lng);
 			times['latitude'] = lat;
 			times['longitude'] = lng;
